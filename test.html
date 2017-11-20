@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+   	<link rel="stylesheet" type="text/css" href="css/site.css">
+
+</head>
+
+
+<body>
+
+    <label class="btn btn-primary symptom" onClick="addSym()">
+
+        <input type="checkbox" autocomplete="off" name="symlist" value="Checkbox 1"> Checkbox 1
+
+    </label>
+    
+    <label class="btn btn-primary symptom" onClick="addSym()">
+
+        <input type="checkbox" autocomplete="off" name="symlist" value="Checkbox 2"> Checkbox 2
+
+    </label>
+
+    <script>
+
+		function addSym(){
+			sym = document.querySelectorAll("input[name=symlist]:checked")[0].value;
+			if (sym.checked = true) {
+				li = document.createElement("li");
+				li.innerHTML = sym; 
+				console.log(li);
+			};
+		}
+
+    </script>
+
+</body>
+
+</html>

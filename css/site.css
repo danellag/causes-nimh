@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* default bootstrap changes because I hate how little control I have over alignments in desktop vs mobile */
+
+.col-xs-6 {width: 25%}
+.row {margin-right: 0;}
+img {max-width: 100%;}
+
+/* ----------------- top nav */
+
+.navbar-brand {height:54px; padding: 0; margin-top: -1px;}
+.nav {margin-right: 15px;}
+.navbar-toggle .icon-bar {height: 3px; background: #337ab7;}
+.mynav .nav > li > a {color: #333; padding:8px;}
+.mynav .nav li {margin-top: 8px;}
+.navbar {margin-bottom: 0;}
+.navbar-nav > li:nth-child(2) {border-left: 1px solid #337ab7; border-right: 1px solid #337ab7;}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {background: #337ab7; color: #fff;}
+
+/* ----------------- all tabs */ 
+
+#tabcontent {margin: 0 auto; border-top: 1px solid #ddd;}
+#tabcontent .nav-tabs {border-bottom: none; }
+#tabcontent .nav-tabs > li {float: none; text-align: center;}
+#tabcontent .nav-tabs > li > a {border-radius: 0; border: 1px solid #ddd; font-size: 16px;}
+#tabcontent .nav-tabs > li:first-child > a, .nav-tabs > li:first-child.active > a, .nav-tabs > li:first-child.active > a:focus, .nav-tabs > li:first-child.active > a:hover {border-top: none;}
+#tabcontent .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li:hover > a:hover  {background-color: #337ab7; color: #fff; font-weight:bold;border: 1px solid #ddd;border-right: none;}
+.nav-tabs > li.active > a:hover {border: 1px solid #ddd;border-right: none;}
+
+#tabcontent .tab-content {padding-top: 30px;}
+
+
+/* ----------------- symptoms tabs */
+
+.symptoms .symptoms-to-select {padding-right: 0;text-align:center;}
+
+.symptoms .btn-group > .symptom {float: none; display: inline-block; background-color: #ddd; color: #000; margin: 20px;border-radius: 4px; width: 120px; }
+.symptoms .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child), .btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {border-radius:4px;}
+
+.symptoms .btn-group > .symptom input:checked {background-color: #337ab7; color: #fff} 
+
+.symptoms .selected-symptoms {padding-right: 0; text-align:center; padding-top: 20px; border-top: 1px solid }
+.symptoms .selected-symptoms {}
+
+
+
+
+
+/* ----------------- footer */ 
+
+footer {min-height:100px;  margin-top: 80px; background: #64666a; color: #fff;}
+footer .foot-contact, footer .foot-nav, footer .foot-sponsors {border-left: 3px solid #fff; margin: 15px 0;}
+footer h4 {font-weight:bold; margin-top: 20px}
+footer ul {padding: 0;}
+footer ul li {list-style:none; margin: 1px 0; padding: 0}
+footer ul li a {color: #fff;}
+footer ul.nav-social li {display: inline-block; padding: 0 10px;}
+footer ul.nav-social li:first-child {padding: 0 10px 0 0;}
+
+/* Media queries */ 
+
+@media (max-width: 768px) 
+{
+	.col-xs-6 {width: 50%;}
+
+	.nav {margin: 0 auto;}
+	.mynav .navbar-form .form-group {display:inline-block; width: 77%;}
+	.navbar-nav .btn-default {display:inline-block}
+	.navbar-nav > li {text-align: left; background-color: #64666a; margin-top: 0;}
+	.mynav .navbar-nav > li > a {padding-top: 18px; padding-bottom: 15px; font-weight: bold; color: #fff; border-top: 1px solid #efefef;}
+	.navbar-nav > li:nth-child(2) {border:none;}
+	
+	
+	#tabcontent {padding-top:0;     padding-right: 0;}
+	#tabcontent .nav-tabs {padding-right: 0;}
+	#tabcontent .nav-tabs li {margin-top: 10px;}
+	#tabcontent .nav-tabs > li > a {border-left: none; border-right: none; margin-right: 0;}
+	#tabcontent .nav-tabs > li:first-child > a, .nav-tabs > li:first-child.active > a, .nav-tabs > li:first-child.active > a:focus, .nav-tabs > li:first-child.active > a:hover {border-left: none; border-right: none;}
+	#tabcontent .tab-content {padding-top: 20px;}
+	
+	
+	footer .row {margin: 0;}
+	footer .foot-contact, footer .foot-nav,  footer .foot-sponsors {padding: 1px 0 10px 15px; margin-left: 20px}
+}
