@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>NIMH - Contact</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+   	<link rel="stylesheet" type="text/css" href="css/site.css">
+
+</head>
+<body>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    
+    
+    	<nav class="navbar mynav">
+        	<div class="container-fluid">
+            	<div class="navbar-header">
+                	<!-- collapses into hamburder menu for mobile -->
+                	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    	<span class="sr-only">Toggle navication</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- logo -->
+                    <a class="navbar-brand" href="#"><img src="img/nimh_logo_144835_3.gif"></a>
+                </div>
+            
+            
+            <!-- right-side nav... the actual nav -->
+            
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                <!-- search bar -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/index.html">Topics</a></li>
+                        <li><a href="/symptoms.html">Symptom Saver</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>         
+        </nav>   <!-- end of bootstrap's nav --> 	
+    
+    <!-- body content --> 
+    
+    <div id="contact" class="container-fluid symptoms">
+        <div class="row">
+            <div class="col-md-2 backblue"></div>
+            
+            <div class="col-md-6 contact-form">
+               <h4>Contact</h4>
+               <form>
+               	*Full Name:<br>
+               	<input type="text" name="fullname" id="fullname" required><br>
+                *E-mail:<br>
+                <input type="email" name="email" id="email" required><br>
+                Phone Number:<br>
+                <input type="number" name="phonenum" id="phonenum"><br>
+                Topic:<br>
+                <select id="select-topic">
+                    <option value="ADHD">ADHD</option>
+                    <option value="Anxiety">Anxiety</option>
+                    <option value="Bipolar Disorder">Bipolar Disorder</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Other">Other Topic</option>
+                </select><br>
+                *Message<br>
+                <textarea rows="8" cols="50" required name="message" id="message" wrap="soft"></textarea>
+                <br>
+                <p class="footnote">* indicates the field is required.</p>
+                <button type="button" class="btn" data-toggle="modal" data-target="#submission-success" id="submit-me">Submit</button>                   
+               </form>
+            </div>
+            
+            
+        <!-- modal -->
+           <div class="modal fade" id="submission-success" tabindex="-1" role="dialog" aria-labelledby="submission-success" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modal-title">Success!</h4>
+                  </div>
+                  <div class="modal-body" id="modal-body">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!-- end modal -->
+            
+            
+            <div class="col-md-3 connect">
+                <h4>Connect</h4>
+                <ul class="">
+                    <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
+                    <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
+                    <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
+                    <li><a href=""><img src="img/follow-us-youtube_152479_2.png"></a></li>
+                    <li><a href=""><img src="img/follow-us-rss_152476_2.png"></a></li>
+                </ul>
+            </div>
+         </div>
+    </div>
+   
+        <script>
+            b = document.getElementById("submit-me");
+            b.onclick = function(){
+                    m = document.getElementById("modal-body");
+                    name = document.getElementById("fullname").value;
+                    email = document.getElementById("email").value;
+                    phone = document.getElementById("phonenum").value;
+                    message = document.getElementById("message").value;
+                    if (message == "" || name == "" || email == ""){
+                        document.getElementById("modal-title").innerHTML = "Submission Failed!";
+                        m.innerHTML = "<p>Please fill out all required fields to complete submission.";
+                    } else {
+                        m.innerHTML="<p>Thank you for your submission, <b>" + name + "</b>. We will get back to you at <b>" + email + "</b> as soon as we can!</p><p>You wrote: <p><b>" + message + "</b></p>"
+                        if (phone != "" && phone.length == 10 ) {
+                            m.innerHTML+="<p>You may expect a call at <b>" + phone + "</b> in 3-5 business days.</p>"
+                        } else if (phone !== "" && (phone.length > 10 || phone.length < 10)){
+                            document.getElementById("modal-title").innerHTML = "Submission Failed!";
+                            m.innerHTML = "<p>Fill out the phone number correctly if you want a call, dipshit";
+                        };
+                    };
+                }
+        </script>
+        
+<footer>
+    <div class="row">
+    	<div class="col-md-2"></div>
+    	<div class="foot-contact col-xs-6">
+        	<h4>Contact Us</h4>
+         	<ul>
+            	<li class="email"><a href="">nimhinfo@nih.gov</a></li>
+                <li class="phone">1-866-615-6464 (toll free)</li>
+                <li class="fax">1-301-443-4279</li>
+                
+            </ul>
+            <h4>Follow Us</h4>
+            <ul class="nav-social">
+                <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
+                <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
+                <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
+            </ul>
+        </div><!-- end contact -->
+        <div class="foot-nav col-xs-2">
+        	<h4>Navigation</h4>
+            <ul>
+            	<li><a href="/index.html">Topics</a></li>
+                <li><a href="/symptoms.html">Symptom Saver</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-6 foot-sponsors">
+          <h4>Sponsors</h4>
+            <p><img src="img/footer_logo_usagov_144856_9.png"> <img src="img/hhs_logo_144855_5.png"></p>          
+        </div>
+    </div><!-- end row -->
+    <div class="row">
+    	<div class="col-md-2"></div>
+    	<div class="col-md-8 disclaimer">
+        <p>The National Institute of Mental Health (NIMH) is part of the National Institutes of Health (NIH), a component of the U.S. Department of Health and Human Services.</p>
+        </div>
+    </div>
+</footer>
+    
+</body>
+
+</html>

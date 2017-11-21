@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>bootstrap</title>
+	<title>NIMH - Symptom Saver</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -41,16 +41,9 @@
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="">Topics</a></li>
-                        <li><a href="">Symptom Saver</a></li>
-                        <li><a href="">Contact</a></li>
-                        <!--<li>
-                            <ul class="nav-social">
-                                <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
-                                <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
-                                <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
-                            </ul>
-                        </li>-->
+                        <li><a href="/index.html">Topics</a></li>
+                        <li><a href="/symptoms.html">Symptom Saver</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>         
@@ -58,10 +51,15 @@
     
     <!-- body content --> 
     
-    <div id="symptomscontent" class="container-fluid symptoms">
+    <div id="symptoms" class="container-fluid symptoms">
     <div class="row">
-        <p class="instructions">Select your symptoms below:</p>
-        <div class="col-md-8">
+        <div class="col-md-2 backblue"></div>
+        <div class="row">
+        	<div class="col-md-9 instructions">
+        		<p>Select your symptoms below. When you have selected all that you think match your experiences, save the list and give it to a doctor or medical professional to start the diagnosis process.</p>
+            </div>
+        </div>
+        <div class="col-md-6 main-symptoms">
             <ul id="symptoms-list-top">
                 <h4>Mental Symptoms</h4>
                 <li>Symptom 1</li>
@@ -70,23 +68,35 @@
                 <li>Symptom 4</li>
                 <li>Symptom 5</li>
                 <li>Symptom 6</li>
-                <h4>Emotional Symptoms</h4>
                 <li>Symptom 7</li>
                 <li>Symptom 8</li>
                 <li>Symptom 9</li>
                 <li>Symptom 10</li>
+                <h4>Emotional Symptoms</h4>
                 <li>Symptom 11</li>
                 <li>Symptom 12</li>
                 <li>Symptom 13</li>
-                <h4>Physical Symptoms</h4>
                 <li>Symptom 14</li>
                 <li>Symptom 15</li>
                 <li>Symptom 16</li>
+                <li>Symptom 17</li>
+                <li>Symptom 18</li>
+                <li>Symptom 19</li>
+                <li>Symptom 20</li>
+                <h4>Physical Symptoms</h4>
+                <li>Symptom 21</li>
+                <li>Symptom 22</li>
+                <li>Symptom 23</li>
+                <li>Symptom 24</li>
+                <li>Symptom 25</li>
+                <li>Symptom 26</li>
+                <li>Symptom 27</li>
             </ul> 
         </div>
     
-            <div class="selected-symptoms col-md-4">
+            <div class="selected-symptoms col-md-3">
             	<h4>Selected Symptoms</h4>
+                <!-- the list items from up there repeat down here when selected. in theory one would have a button at the end to download the symptoms -->
                 <ul id="symptoms-list-bottom">
                 </ul>
             </div>
@@ -94,38 +104,38 @@
     </div>
    
         <script>
-                    addArray = []
-                    x = document.querySelectorAll("#symptoms-list-top li")
-                    for (i=0; i<x.length; ++i) {
-                        x[i].onclick = function(){
-                        console.log(this);
-                        console.log(this.classList);
-                        this.classList.toggle("active");
-                        sym = this.innerHTML;
-                        if (addArray.indexOf(sym) == -1) {
-                            addArray.push(sym);
-                            addArray.sort();
+            addArray = []
+            x = document.querySelectorAll("#symptoms-list-top li")
+            for (i=0; i<x.length; ++i) {
+                x[i].onclick = function(){
+                console.log(this);
+                console.log(this.classList);
+                this.classList.toggle("active");
+                sym = this.innerHTML;
+                if (addArray.indexOf(sym) == -1) {
+                    addArray.push(sym);
+                    addArray.sort();
+                    console.log(addArray);
+                }else {
+                    for (i=0; i<addArray.length; i++){
+                        r = addArray[i];
+                        if (sym==r){
+                            addArray.splice(i,1);
                             console.log(addArray);
-                        }else {
-                            for (i=0; i<addArray.length; i++){
-                                r = addArray[i];
-                                if (sym==r){
-                                    addArray.splice(i,1);
-                                    console.log(addArray);
-                                }
-                            }
-                    };
-                            document.getElementById("symptoms-list-bottom").innerHTML="";
-                            for (i=0; i<addArray.length; i++){
-                                a = addArray[i];
-                                li = document.createElement("li");
-                                li.innerHTML = a;
-                                ul = document.getElementById("symptoms-list-bottom");
-                                ul.appendChild(li);
-                            };
                         }
                     }
-                    
+            };
+                    document.getElementById("symptoms-list-bottom").innerHTML="";
+                    for (i=0; i<addArray.length; i++){
+                        a = addArray[i];
+                        li = document.createElement("li");
+                        li.innerHTML = a;
+                        ul = document.getElementById("symptoms-list-bottom");
+                        ul.appendChild(li);
+                    };
+                }
+            }
+
         </script>
         
 <footer>
@@ -149,9 +159,9 @@
         <div class="foot-nav col-xs-2">
         	<h4>Navigation</h4>
             <ul>
-            	<li><a href="">Topics</a></li>
-                <li><a href="">Symptom Saver</a></li>
-                <li><a href="">Contact</a></li>
+            	<li><a href="/index.html">Topics</a></li>
+                <li><a href="/symptoms.html">Symptom Saver</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </div>
         <div class="col-xs-6 foot-sponsors">

@@ -6,50 +6,74 @@
 .col-xs-6 {width: 25%}
 .row {margin-right: 0;}
 img {max-width: 100%;}
+.container-fluid {padding-right: 0;}
+ul {padding: 0;}
+ul li {list-style: none;}
+h4 {font-weight: bold;}
 
 /* ----------------- top nav */
 
 .navbar-brand {height:54px; padding: 0; margin-top: -1px;}
 .nav {margin-right: 15px;}
-.navbar-toggle .icon-bar {height: 3px; background: #337ab7;}
+.navbar-toggle .icon-bar {height: 3px; background: #005395;}
 .mynav .nav > li > a {color: #333; padding:8px;}
 .mynav .nav li {margin-top: 8px;}
 .navbar {margin-bottom: 0;}
-.navbar-nav > li:nth-child(2) {border-left: 1px solid #337ab7; border-right: 1px solid #337ab7;}
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {background: #337ab7; color: #fff;}
+.navbar-nav > li:nth-child(2) {border-left: 1px solid #005395; border-right: 1px solid #005395;}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {background: #005395; color: #fff;}
 
 /* ----------------- main page tabs */ 
 
-#tabcontent {margin: 0 auto; border-top: 1px solid #ddd;}
+#tabcontent {margin: 0 auto; border-top: 1px solid #005395;}
 #tabcontent .nav-tabs {border-bottom: none; }
 #tabcontent .nav-tabs > li {float: none; text-align: center;}
 #tabcontent .nav-tabs > li > a {border-radius: 0; border: 1px solid #ddd; font-size: 16px;}
 #tabcontent .nav-tabs > li:first-child > a, .nav-tabs > li:first-child.active > a, .nav-tabs > li:first-child.active > a:focus, .nav-tabs > li:first-child.active > a:hover {border-top: none;}
-#tabcontent .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li:hover > a:hover  {background-color: #337ab7; color: #fff; font-weight:bold;border: 1px solid #ddd;border-right: none;}
+#tabcontent .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li:hover > a:hover  {background-color: #005395; color: #fff; font-weight:bold;border: 1px solid #ddd;border-right: none;}
 .nav-tabs > li.active > a:hover {border: 1px solid #ddd;border-right: none;}
 
 #tabcontent .tab-content {padding-top: 30px;}
 
 
-/* ----------------- symptoms page */
-.symptoms {border-top:1px solid #ddd; padding-top: 30px;}
-.symptoms p.instructions {padding-left:60px; font-weight: bold;}
-.symptoms h4 {font-weight: bold;}
-.symptoms .col-md-8{padding-right: 0;text-align:center;}
+/* ----------------- symptoms page, contact form */
+.backblue {position:absolute; background-color: #005395;height: 80%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px;}
+#symptoms, #contact {border-top:1px solid #005395; }
+#symptoms .instructions {margin-left:19%; padding-top: 30px;}
+#symptoms .instructions p {font-weight: bold;}
+#symptoms .main-symptoms, #contact .contact-form {padding-right: 0; margin-left: 17%;}
 
-#symptoms-list-top li {display: inline-block; background-color: #ddd; color: #000; border: 1px solid #999; padding: 10px 0; margin: 15px 10px;border-radius: 4px; width: 120px; }
-#symptoms-list-top li:hover {cursor: pointer;-webkit-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
+.main-symptoms #symptoms-list-top {text-align:center; }
+.main-symptoms #symptoms-list-top li {display: inline-block; background-color: #ddd; color: #000; border: 1px solid #999; padding: 10px 0; margin: 15px 10px;border-radius: 4px; width: 120px; }
+.main-symptoms #symptoms-list-top li:hover {cursor: pointer;-webkit-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
 -moz-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
 box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);}
 
-#symptoms-list-top li.active{background-color: #337ab7; color: #fff} 
+#symptoms-list-top li.active{background-color: #337ab7; color: #fff; border-color: #005395} 
 
-.symptoms .selected-symptoms {padding-right: 0; text-align:center;}
-#symptoms-list-bottom, #symptoms-list-top {padding-left:0;}
-.selected-symptoms #symptoms-list-bottom li {list-style: none; padding: 10px 0;border-bottom: 1px dashed #337ab7;}
-.selected-symptoms #symptoms-list-bottom li:first-child {border-top: 1px dashed #337ab7;}
+#symptoms .selected-symptoms {padding-right: 0; text-align:center;}
+.selected-symptoms #symptoms-list-bottom, .main-symptoms #symptoms-list-top {padding-left:0;}
+.selected-symptoms #symptoms-list-bottom li {padding: 10px 0;border-bottom: 1px dashed #005395;}
+.selected-symptoms #symptoms-list-bottom li:first-child {border-top: 1px dashed #005395;}
+
+#contact .contact-form, #contact .connect {padding-top: 30px;}
+
+.contact-form h4 {width: 80%; margin-left: auto; margin-right: auto;}
+.contact-form form {width: 80%; margin: 0 auto 20px;}
+.contact-form form textarea, .contact-form form input {width: 100%;border-radius:4px; margin-bottom: 20px; margin-top: 5px; padding: 5px;}
+.contact-form form select {width: 25%; border-radius: 4px; margin-bottom: 20px;}
+.contact-form .btn {border: 1px solid #999;}
+p.footnote {font-size: 12px; font-style: italic;}
 
 
+.connect ul li a {display: block; background-color: #64666a; text-align: center; padding: 15px 10px; margin: 30px auto; border-radius: 4px;}
+.connect ul li a:hover {background-color: #ddd;}
+
+
+
+/* ----------------- modal */ 
+.modal-title {margin-bottom: 0;line-height: 1.5; text-align: left; color:#337ab7;}
+.modal-body p {text-align: center;}
+.modal-body p b {color:#337ab7;}
 
 
 /* ----------------- footer */ 
@@ -58,16 +82,24 @@ footer {min-height:100px;  margin-top: 80px; background: #64666a; color: #fff;}
 footer .foot-contact, footer .foot-nav, footer .foot-sponsors {border-left: 3px solid #fff; margin: 15px 0; min-height: 196px;}
 footer h4 {font-weight:bold; margin-top: 20px}
 footer ul {padding: 0;}
-footer ul li {list-style:none; margin: 1px 0; padding: 0}
+footer ul li {margin: 1px 0; padding: 0}
 footer ul li a {color: #fff;}
+footer ul li a:hover, footer ul li a:visited {color: #fff; text-decoration:none;}
 footer ul.nav-social li {display: inline-block; padding: 0 10px;}
 footer ul.nav-social li:first-child {padding: 0 10px 0 0;}
 
 /* Media queries */ 
+@media only screen and (min-height: 1081px)
+{
+    .backblue {height: 50%;}
+}
 
-@media (max-width: 768px) 
+
+
+@media only screen and (max-width: 768px) 
 {
 	.col-xs-6 {width: 50%;}
+	.navbar-collapse {padding-left:0;}
 
 	.nav {margin: 0 auto;}
 	.mynav .navbar-form .form-group {display:inline-block; width: 77%;}
@@ -84,7 +116,13 @@ footer ul.nav-social li:first-child {padding: 0 10px 0 0;}
 	#tabcontent .nav-tabs > li:first-child > a, .nav-tabs > li:first-child.active > a, .nav-tabs > li:first-child.active > a:focus, .nav-tabs > li:first-child.active > a:hover {border-left: none; border-right: none;}
 	#tabcontent .tab-content {padding-top: 20px;}
 	
-    .symptoms .selected-symptoms { padding-top: 20px; border-top: 1px solid }
+    #symptoms .selected-symptoms, #contanct .connect { padding-top: 20px; padding-left: 0; border-top: 1px solid }
+	#symptoms .instructions { margin: 0; padding: 30px 15px 0 30px;}
+	#symptoms .main-symptoms, #contact .contact-form {margin:0; padding-left: 0;}
+    
+    .contact-form h4 {width: 90%; margin-left: auto; margin-right: auto;}
+    .contact-form form {width: 90%; margin: 0 auto}
+    .contact-form form textarea, .contact-form form input {width: 100%; border-radius:4px; margin: 0 auto 20px;}
 	
 	footer .row {margin: 0;}
 	footer .foot-contact, footer .foot-nav,  footer .foot-sponsors {padding: 1px 0 10px 15px; margin-left: 20px}
