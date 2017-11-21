@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>bootstrap</title>
+	<title>NIMH</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -36,25 +36,30 @@
                 <!-- search bar -->
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search" id="search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default" id="search-btn">Submit</button>
                 </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/causes-nimh/index.html">Topics</a></li>
                         <li><a href="/causes-nimh/symptoms.html">Symptom Saver</a></li>
                         <li><a href="/causes-nimh/contact.html">Contact</a></li>
-                        <!--<li>
-                            <ul class="nav-social">
-                                <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
-                                <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
-                                <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
-                            </ul>
-                        </li>-->
                     </ul>
                 </div>
             </div>         
         </nav>   <!-- end of bootstrap's nav --> 	
+    
+    <script>
+        subBtn = document.getElementById("search-btn");
+        subBtn.onclick = function(e){
+            e.preventDefault();
+            if(document.getElementById("search").value == ""){
+                alert("Enter a search term.")
+            } else{
+            alert("You have searched for: " + document.getElementById("search").value);
+        };
+        }
+    </script>
     
     <!-- body content --> 
     
@@ -63,65 +68,198 @@
     
   <!-- topic tabs -->
   <ul class="nav nav-tabs col-sm-2" role="tablist">
-    <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Tab1</a></li>
-    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Tab2</a></li>
-    <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Tab3</a></li>
-    <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Tab4</a></li>
+    <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">ADHD</a></li>
+    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Anxiety</a></li>
+    <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Bipolar Disorder</a></li>
+    <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Depression</a></li>
   </ul>
 
   <!-- topic tab content -->
   	<div class="tab-content col-sm-6">
   <!-- tab1 content -->
+        <a name="top"></a>
     <div role="tabpanel" class="tab-pane active" id="tab1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat a arcu vitae molestie. Quisque pretium erat non placerat tristique. Quisque vitae arcu convallis libero porttitor ornare. Sed posuere est nec bibendum varius. Nulla vulputate eros ac porttitor elementum. Aliquam erat volutpat. Morbi auctor erat vel bibendum venenatis. Maecenas lorem ex, vehicula vel felis non, ultrices hendrerit erat. Proin dictum mollis turpis. Ut mattis dolor non lectus aliquet, vitae dictum lacus vestibulum. Sed sagittis dui libero, quis suscipit tellus malesuada id. Suspendisse nec lacinia orci, nec finibus libero. Sed arcu ipsum, maximus nec lacus tincidunt, varius molestie orci.</p>
+        <div class="center-me"><img src="img/adhd.jpg"></div>
+        <h4>Attention Deficit Hyperactivity Disorder (ADHD)</h4>
+        <p>Attention-deficit/hyperactivity disorder (ADHD) is a brain disorder marked by an ongoing pattern of inattention and/or hyperactivity-impulsivity that interferes with functioning or development.</p>
+        <p><b>Inattention</b> means a person wanders off task, lacks persistence, has difficulty sustaining focus, and is disorganized; and these problems are not due to defiance or lack of comprehension.</p>
+        <p><b>Hyperactivity</b> means a person seems to move about constantly, including in situations in which it is not appropriate; or excessively fidgets, taps, or talks. In adults, it may be extreme restlessness or wearing others out with constant activity.</p>
+        <p><b>Impulsivity</b> means a person makes hasty actions that occur in the moment without first thinking about them and that may have high potential for harm; or a desire for immediate rewards or inability to delay gratification. An impulsive person may be socially intrusive and excessively interrupt others or make important decisions without considering the long-term consequences.</p>
         
-        <p>Nam sit amet ultrices mauris. Donec eu ipsum eleifend nibh consequat scelerisque et sed risus. Etiam nec ex eleifend, pellentesque lectus ut, posuere nibh. Cras tempor ipsum non ullamcorper hendrerit. Suspendisse sit amet eros porta, tempus nunc dignissim, iaculis ante. Ut ornare enim non sem iaculis, quis vulputate orci porta. Curabitur lorem lorem, dignissim ut ex elementum, facilisis congue orci. Sed eu urna ex. Maecenas non nibh sit amet dolor condimentum placerat nec vulputate odio. Cras fermentum sem maximus, aliquet leo non, lobortis ipsum. Quisque condimentum sit amet lorem in cursus.</p>
+        <p>Inattention and hyperactivity/impulsivity are the key behaviors of ADHD. Some people with ADHD only have problems with one of the behaviors, while others have both inattention and hyperactivity-impulsivity.Most children have the combined type of ADHD. In preschool, the most common ADHD symptom is hyperactivity. It is normal to have some inattention, unfocused motor activity and impulsivity, but for people with ADHD, these behaviors are more severe; occur more often; interfere with or reduce the quality of how they functions socially, at school, or in a job.</p>
         
-        <p>In auctor scelerisque magna sed ornare. Proin risus mi, sagittis nec iaculis et, condimentum et lorem. Nulla blandit volutpat lorem ut fermentum. Curabitur et rutrum est. Mauris nisi arcu, facilisis vitae ipsum placerat, convallis ornare massa. Sed in ligula non metus viverra ullamcorper. Donec tincidunt nunc et purus eleifend, auctor sodales erat pulvinar. Duis gravida, nulla eget gravida suscipit, enim odio vulputate lectus, ut volutpat metus neque ut nunc. Donec vel ex nisl. Sed lacus turpis, tincidunt at quam id, sagittis mattis sapien. Morbi ac consectetur nisl, vitae fringilla dolor.</p>
+        <p>Diagnosis of ADHD requires a comprehensive evaluation by a licensed clinician, such as a pediatrician, psychologist, or psychiatrist with expertise in ADHD. For a person to receive a diagnosis of ADHD, the symptoms of inattention and/or hyperactivity-impulsivity must be chronic or long-lasting, impair the person's functioning, and cause the person to fall behind normal development for his or her age. The doctor will also ensure that any ADHD symptoms are not due to another medical or psychiatric condition. Most children with ADHD receive a diagnosis during the elementary school years. For an adolescent or adult to receive a diagnosis of ADHD, the symptoms need to have been present prior to age 12.</p>
         
-        <p>Sed eleifend urna vitae erat sagittis fringilla. Vivamus id justo id libero pulvinar consequat in porttitor enim. In vel quam fermentum, varius nulla a, feugiat felis. Sed molestie mollis mauris eget pulvinar. Aenean tincidunt efficitur eros vel rhoncus. Praesent ac pretium quam. Quisque scelerisque egestas elit, non molestie ipsum faucibus in. Maecenas vitae euismod erat. Duis consectetur tempor efficitur. Aliquam et nulla efficitur, placerat neque et, lobortis lorem. Nulla facilisi. Maecenas id mattis ante, quis vehicula tortor. Phasellus ornare facilisis lectus id tempor. Suspendisse potenti. Pellentesque sit amet dui sollicitudin, porttitor massa a, rutrum mauris. Curabitur condimentum elit ac eros aliquet, at tristique tortor imperdiet.</p>
+        <p>ADHD symptoms can appear as early as between the ages of 3 and 6 and can continue through adolescence and adulthood. Symptoms of ADHD can be mistaken for emotional or disciplinary problems or missed entirely in quiet, well-behaved children, leading to a delay in diagnosis. Adults with undiagnosed ADHD may have a history of poor academic performance, problems at work, or difficult or failed relationships.</p>
         
-        <p>Aliquam erat volutpat. Pellentesque orci purus, interdum id aliquet eget, fringilla ac massa. Aliquam tellus nisl, sagittis eu ultricies in, varius hendrerit leo. Phasellus pulvinar neque sit amet tempus rhoncus. Proin viverra placerat fringilla. Fusce blandit consequat tortor, non euismod enim finibus vel. Maecenas eleifend pellentesque urna, quis dapibus ipsum mollis quis. In porta volutpat risus sit amet facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum, enim sed elementum volutpat, est urna maximus nisi, ac pharetra neque tellus quis risus. Curabitur mollis malesuada euismod. Fusce pulvinar tincidunt urna et dictum. Duis venenatis turpis nisl, sed ultrices tellus malesuada ut. Fusce id justo dolor. Nullam sagittis arcu pellentesque lacus fringilla, nec imperdiet lacus scelerisque. </p>
+        <p>ADHD symptoms can change over time as a person ages. In young children with ADHD, hyperactivity-impulsivity is the most predominant symptom. As a child reaches elementary school, the symptom of inattention may become more prominent and cause the child to struggle academically. In adolescence, hyperactivity seems to lessen and may show more often as feelings of restlessness or fidgeting, but inattention and impulsivity may remain. Many adolescents with ADHD also struggle with relationships and antisocial behaviors. Inattention, restlessness, and impulsivity tend to persist into adulthood.</p>
+        
+        <h4>Treatment &amp; Therapies</h4>
+        
+        <p>While there is no cure for ADHD, currently available treatments can help reduce symptoms and improve functioning. Treatments include medication, psychotherapy, education or training, or a combination of treatments.</p>
+        
+        <h5>Medication</h5>
+        
+        <p>For many people, ADHD medications reduce hyperactivity and impulsivity and improve their ability to focus, work, and learn. Medication also may improve physical coordination. Sometimes several different medications or dosages must be tried before finding the right one that works for a particular person. Anyone taking medications must be monitored closely and carefully by their prescribing doctor.</p>
+        
+        <p><b>Stimulants.</b> The most common type of medication used for treating ADHD is called a "stimulant." Although it may seem unusual to treat ADHD with a medication that is considered a stimulant, it works because it increases the brain chemicals dopamine and norepinephrine, which play essential roles in thinking and attention.</p>
+
+        <p>Under medical supervision, stimulant medications are considered safe. However, there are risks and side effects, especially when misused or taken in excess of the prescribed dose.For example, stimulants can raise blood pressure and heart rate and increase anxiety. Therefore, a person with other health problems, including high blood pressure, seizures, heart disease, glaucoma, liver or kidney disease, or an anxiety disorder should tell their doctor before taking a stimulant.</p>
+        
+        <p><b>Non-stimulants.</b> A few other ADHD medications are non-stimulants. These medications take longer to start working than stimulants, but can also improve focus, attention, and impulsivity in a person with ADHD. Doctors may prescribe a non-stimulant: when a person has bothersome side effects from stimulants; when a stimulant was not effective; or in combination with a stimulant to increase effectiveness.</p>
+
+        <p>Although not approved by the U.S. Food and Drug Administration (FDA) specifically for the treatment of ADHD, some antidepressants are sometimes used alone or in combination with a stimulant to treat ADHD. Antidepressants may help all of the symptoms of ADHD and can be prescribed if a patient has bothersome side effects from stimulants. Antidepressants can be helpful in combination with stimulants if a patient also has another condition, such as an anxiety disorder, depression, or another mood disorder.</p>
+
+        <p>Doctors and patients can work together to find the best medication, dose, or medication combination. Learn the basics about stimulants and other mental health medications on the NIMH Mental Health Medications webpage and check the FDAwebsite, for the latest information on warnings, patient medication guides, or newly approved medications.</p>
+        
+        <h5>Psychotherapy</h5>
+
+        <p>Adding psychotherapy to treat ADHD can help patients and their families to better cope with everyday problems.</p>
+
+        <p>Behavioral therapy is a type of psychotherapy that aims to help a person change his or her behavior. It might involve practical assistance, such as help organizing tasks or completing schoolwork, or working through emotionally difficult events. Behavioral therapy also teaches a person how to monitor his or her own behavior, and give oneself praise or rewards for acting in a desired way, such as controlling anger or thinking before acting.</p>
+
+        <p>Parents, teachers, and family members also can give positive or negative feedback for certain behaviors and help establish clear rules, chore lists, and other structured routines to help a person control his or her behavior. Therapists may also teach children social skills, such as how to wait their turn, share toys, ask for help, or respond to teasing. Learning to read facial expressions and the tone of voice in others, and how to respond appropriately can also be part of social skills training.</p>
+
+        <p>Cognitive behavioral therapy can also teach a person mindfulness techniques, or meditation. A person learns how to be aware and accepting of one's own thoughts and feelings to improve focus and concentration. The therapist also encourages the person with ADHD to adjust to the life changes that come with treatment, such as thinking before acting, or resisting the urge to take unnecessary risks.</p>
+
+        <p>Family and marital therapy can help family members and spouses find better ways to handle disruptive behaviors, to encourage behavior changes, and improve interactions with the patient.</p>
+        <p><a href="#top">Back to top</a></p>
    </div>
         
           <!-- tab2 content -->
 
 	<div role="tabpanel" class="tab-pane" id="tab2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat a arcu vitae molestie. Quisque pretium erat non placerat tristique. Quisque vitae arcu convallis libero porttitor ornare. Sed posuere est nec bibendum varius. Nulla vulputate eros ac porttitor elementum. Aliquam erat volutpat. Morbi auctor erat vel bibendum venenatis. Maecenas lorem ex, vehicula vel felis non, ultrices hendrerit erat. Proin dictum mollis turpis. Ut mattis dolor non lectus aliquet, vitae dictum lacus vestibulum. Sed sagittis dui libero, quis suscipit tellus malesuada id. Suspendisse nec lacinia orci, nec finibus libero. Sed arcu ipsum, maximus nec lacus tincidunt, varius molestie orci.</p>
+        <div class="center-me"><img src="img/anxiety.jpg"></div>
+        <h4>Anxiety</h4>
+        <p>Occasional anxiety is a normal part of life. You might feel anxious when faced with a problem at work, before taking a test, or making an important decision. But anxiety disorders involve more than temporary worry or fear. For a person with an anxiety disorder, the anxiety does not go away and can get worse over time. The feelings can interfere with daily activities such as job performance, school work, and relationships. There are several different types of anxiety disorders. Examples include generalized anxiety disorder, panic disorder, and social anxiety disorder.</p>
         
-        <p>Nam sit amet ultrices mauris. Donec eu ipsum eleifend nibh consequat scelerisque et sed risus. Etiam nec ex eleifend, pellentesque lectus ut, posuere nibh. Cras tempor ipsum non ullamcorper hendrerit. Suspendisse sit amet eros porta, tempus nunc dignissim, iaculis ante. Ut ornare enim non sem iaculis, quis vulputate orci porta. Curabitur lorem lorem, dignissim ut ex elementum, facilisis congue orci. Sed eu urna ex. Maecenas non nibh sit amet dolor condimentum placerat nec vulputate odio. Cras fermentum sem maximus, aliquet leo non, lobortis ipsum. Quisque condimentum sit amet lorem in cursus.</p>
+        <p>People with <b>generalized anxiety disorder</b> display excessive anxiety or worry for months and face several anxiety-related symptoms.</p>
         
-        <p>In auctor scelerisque magna sed ornare. Proin risus mi, sagittis nec iaculis et, condimentum et lorem. Nulla blandit volutpat lorem ut fermentum. Curabitur et rutrum est. Mauris nisi arcu, facilisis vitae ipsum placerat, convallis ornare massa. Sed in ligula non metus viverra ullamcorper. Donec tincidunt nunc et purus eleifend, auctor sodales erat pulvinar. Duis gravida, nulla eget gravida suscipit, enim odio vulputate lectus, ut volutpat metus neque ut nunc. Donec vel ex nisl. Sed lacus turpis, tincidunt at quam id, sagittis mattis sapien. Morbi ac consectetur nisl, vitae fringilla dolor.</p>
+        <p>People with <b>panic disorder</b> have recurrent unexpected panic attacks, which are sudden periods of intense fear that may include palpitations, pounding heart, or accelerated heart rate; sweating; trembling or shaking; sensations of shortness of breath, smothering, or choking; and feeling of impending doom.</p>
         
-        <p>Sed eleifend urna vitae erat sagittis fringilla. Vivamus id justo id libero pulvinar consequat in porttitor enim. In vel quam fermentum, varius nulla a, feugiat felis. Sed molestie mollis mauris eget pulvinar. Aenean tincidunt efficitur eros vel rhoncus. Praesent ac pretium quam. Quisque scelerisque egestas elit, non molestie ipsum faucibus in. Maecenas vitae euismod erat. Duis consectetur tempor efficitur. Aliquam et nulla efficitur, placerat neque et, lobortis lorem. Nulla facilisi. Maecenas id mattis ante, quis vehicula tortor. Phasellus ornare facilisis lectus id tempor. Suspendisse potenti. Pellentesque sit amet dui sollicitudin, porttitor massa a, rutrum mauris. Curabitur condimentum elit ac eros aliquet, at tristique tortor imperdiet.</p>
+        <p>People with <b>social anxiety disorder</b> (sometimes called "social phobia") have a marked fear of social or performance situations in which they expect to feel embarrassed, judged, rejected, or fearful of offending others.</p>
         
-        <p>Aliquam erat volutpat. Pellentesque orci purus, interdum id aliquet eget, fringilla ac massa. Aliquam tellus nisl, sagittis eu ultricies in, varius hendrerit leo. Phasellus pulvinar neque sit amet tempus rhoncus. Proin viverra placerat fringilla. Fusce blandit consequat tortor, non euismod enim finibus vel. Maecenas eleifend pellentesque urna, quis dapibus ipsum mollis quis. In porta volutpat risus sit amet facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum, enim sed elementum volutpat, est urna maximus nisi, ac pharetra neque tellus quis risus. Curabitur mollis malesuada euismod. Fusce pulvinar tincidunt urna et dictum. Duis venenatis turpis nisl, sed ultrices tellus malesuada ut. Fusce id justo dolor. Nullam sagittis arcu pellentesque lacus fringilla, nec imperdiet lacus scelerisque. </p>
+        <p>Evaluation for an anxiety disorder often begins with a visit to a primary care provider. Some physical health conditions, such as an overactive thyroid or low blood sugar, as well as taking certain medications, can imitate or worsen an anxiety disorder. A thorough mental health evaluation is also helpful, because anxiety disorders often co-exist with other related conditions, such as depression or obsessive-compulsive disorder. </p>
+        
+        <h4>Treatments &amp; Therapies</h4>
+        <h5>Psychotherapy</h5>
+        
+        <p>Psychotherapy or "talk therapy" can help people with anxiety disorders. To be effective, psychotherapy must be directed at the person's specific anxieties and tailored to his or her needs. A typical "side effect" of psychotherapy is temporary discomfort involved with thinking about confronting feared situations.</p>
+        
+        <p><b>Cognitive Behavioral Therapy (CBT)</b>  is a type of psychotherapy that can help people with anxiety disorders. It teaches a person different ways of thinking, behaving, and reacting to anxiety-producing and fearful situations. CBT can also help people learn and practice social skills, which is vital for treating social anxiety disorder.</p>
+
+        <p>Two specific stand-alone components of CBT used to treat social anxiety disorder are cognitive therapy and exposure therapy. Cognitive therapy focuses on identifying, challenging, and then neutralizing unhelpful thoughts underlying anxiety disorders.</p>
+
+        <p>Exposure therapy focuses on confronting the fears underlying an anxiety disorder in order to help people engage in activities they have been avoiding. Exposure therapy is used along with relaxation exercises and/or imagery. One study, called a meta-analysis because it pulls together all of the previous studies and calculates the statistical magnitude of the combined effects, found that cognitive therapy was superior to exposure therapy for treating social anxiety disorder.</p>
+
+        <p>CBT may be conducted individually or with a group of people who have similar problems. Group therapy is particularly effective for social anxiety disorder. Often "homework" is assigned for participants to complete between sessions.</p>
+        
+        <h5>Medications</h5>
+        <p><b>Antidepressants:</b> Antidepressants are used to treat depression, but they also are helpful for treating anxiety disorders. They take several weeks to start working and may cause side effects such as headache, nausea, or difficulty sleeping. The side effects are usually not a problem for most people, especially if the dose starts off low and is increased slowly over time.</p>
+        
+        <p>Although antidepressants are safe and effective for many people, they may be risky for children, teens, and young adults. A "black box" warning—the most serious type of warning that a prescription can carry—has been added to the labels of antidepressants. The labels now warn that antidepressants may cause some people to have suicidal thoughts or make suicide attempts. For this reason, anyone taking an antidepressant should be monitored closely, especially when they first start taking the medication.</p>
+        
+        <p><b>Anti-Anxiety Medications:</b> Anti-anxiety medications help reduce the symptoms of anxiety, panic attacks, or extreme fear and worry. The most common anti-anxiety medications are called benzodiazepines. Benzodiazepines are first-line treatments for generalized anxiety disorder. With panic disorder or social phobia (social anxiety disorder), benzodiazepines are usually second-line treatments, behind antidepressants.</p>
+        
+        <p><b>Beta-Blcokers:</b> Beta-blockers, such as propranolol and atenolol, are also helpful in the treatment of the physical symptoms of anxiety, especially social anxiety. Physicians prescribe them to control rapid heartbeat, shaking, trembling, and blushing in anxious situations.</p>
+        
+        <p>Choosing the right medication, medication dose, and treatment plan should be based on a person's needs and medical situation, and done under an expert's care. Only an expert clinician can help you decide whether the medication's ability to help is worth the risk of a side effect. Your doctor may try several medicines before finding the right one.</p>
+        <p><a href="#top">Back to top</a></p>
 	</div>    
 
           <!-- tab3 content -->
     <div role="tabpanel" class="tab-pane" id="tab3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat a arcu vitae molestie. Quisque pretium erat non placerat tristique. Quisque vitae arcu convallis libero porttitor ornare. Sed posuere est nec bibendum varius. Nulla vulputate eros ac porttitor elementum. Aliquam erat volutpat. Morbi auctor erat vel bibendum venenatis. Maecenas lorem ex, vehicula vel felis non, ultrices hendrerit erat. Proin dictum mollis turpis. Ut mattis dolor non lectus aliquet, vitae dictum lacus vestibulum. Sed sagittis dui libero, quis suscipit tellus malesuada id. Suspendisse nec lacinia orci, nec finibus libero. Sed arcu ipsum, maximus nec lacus tincidunt, varius molestie orci.</p>
+        <div class="center-me"><img src="img/bipolar.jpg"></div>
+        <h4>Bipolar Disorder (Manic-Depression)</h4>
+        <p>Bipolar disorder, also known as manic-depressive illness, is a brain disorder that causes unusual shifts in mood, energy, activity levels, and the ability to carry out day-to-day tasks.</p>
         
-        <p>Nam sit amet ultrices mauris. Donec eu ipsum eleifend nibh consequat scelerisque et sed risus. Etiam nec ex eleifend, pellentesque lectus ut, posuere nibh. Cras tempor ipsum non ullamcorper hendrerit. Suspendisse sit amet eros porta, tempus nunc dignissim, iaculis ante. Ut ornare enim non sem iaculis, quis vulputate orci porta. Curabitur lorem lorem, dignissim ut ex elementum, facilisis congue orci. Sed eu urna ex. Maecenas non nibh sit amet dolor condimentum placerat nec vulputate odio. Cras fermentum sem maximus, aliquet leo non, lobortis ipsum. Quisque condimentum sit amet lorem in cursus.</p>
+        <p>There are four basic types of bipolar disorder; all of them involve clear changes in mood, energy, and activity levels. These moods range from periods of extremely "up," elated, and energized behavior (known as manic episodes) to very sad, "down," or hopeless periods (known as depressive episodes). Less severe manic periods are known as hypomanic episodes.</p>
         
-        <p>In auctor scelerisque magna sed ornare. Proin risus mi, sagittis nec iaculis et, condimentum et lorem. Nulla blandit volutpat lorem ut fermentum. Curabitur et rutrum est. Mauris nisi arcu, facilisis vitae ipsum placerat, convallis ornare massa. Sed in ligula non metus viverra ullamcorper. Donec tincidunt nunc et purus eleifend, auctor sodales erat pulvinar. Duis gravida, nulla eget gravida suscipit, enim odio vulputate lectus, ut volutpat metus neque ut nunc. Donec vel ex nisl. Sed lacus turpis, tincidunt at quam id, sagittis mattis sapien. Morbi ac consectetur nisl, vitae fringilla dolor.</p>
+        <p><b>Bipolar I Disorder:</b> defined by manic episodes that last at least 7 days, or by manic symptoms that are so severe that the person needs immediate hospital care. Usually, depressive episodes occur as well, typically lasting at least 2 weeks. Episodes of depression with mixed features (having depression and manic symptoms at the same time) are also possible.</p>
         
-        <p>Sed eleifend urna vitae erat sagittis fringilla. Vivamus id justo id libero pulvinar consequat in porttitor enim. In vel quam fermentum, varius nulla a, feugiat felis. Sed molestie mollis mauris eget pulvinar. Aenean tincidunt efficitur eros vel rhoncus. Praesent ac pretium quam. Quisque scelerisque egestas elit, non molestie ipsum faucibus in. Maecenas vitae euismod erat. Duis consectetur tempor efficitur. Aliquam et nulla efficitur, placerat neque et, lobortis lorem. Nulla facilisi. Maecenas id mattis ante, quis vehicula tortor. Phasellus ornare facilisis lectus id tempor. Suspendisse potenti. Pellentesque sit amet dui sollicitudin, porttitor massa a, rutrum mauris. Curabitur condimentum elit ac eros aliquet, at tristique tortor imperdiet.</p>
+        <p><b>Bipolar II Disorder:</b> defined by a pattern of depressive episodes and hypomanic episodes, but not the full-blown manic episodes described above.</p>
         
-        <p>Aliquam erat volutpat. Pellentesque orci purus, interdum id aliquet eget, fringilla ac massa. Aliquam tellus nisl, sagittis eu ultricies in, varius hendrerit leo. Phasellus pulvinar neque sit amet tempus rhoncus. Proin viverra placerat fringilla. Fusce blandit consequat tortor, non euismod enim finibus vel. Maecenas eleifend pellentesque urna, quis dapibus ipsum mollis quis. In porta volutpat risus sit amet facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum, enim sed elementum volutpat, est urna maximus nisi, ac pharetra neque tellus quis risus. Curabitur mollis malesuada euismod. Fusce pulvinar tincidunt urna et dictum. Duis venenatis turpis nisl, sed ultrices tellus malesuada ut. Fusce id justo dolor. Nullam sagittis arcu pellentesque lacus fringilla, nec imperdiet lacus scelerisque. </p>
+        <p><b>Cyclothymic Disorder (also called cyclothymia):</b> defined by numerous periods of hypomanic symptoms as well numerous periods of depressive symptoms lasting for at least 2 years (1 year in children and adolescents). However, the symptoms do not meet the diagnostic requirements for a hypomanic episode and a depressive episode.</p>
+        
+        <p>Other Specified and Unspecified Bipolar and Related Disorders— defined by bipolar disorder symptoms that do not match the three categories listed above.</p>
+        
+        <p>People with bipolar disorder experience periods of unusually intense emotion, changes in sleep patterns and activity levels, and unusual behaviors. These distinct periods are called "mood episodes." Mood episodes are drastically different from the moods and behaviors that are typical for the person. Extreme changes in energy, activity, and sleep go along with mood episodes. Sometimes a mood episode includes symptoms of both manic and depressive symptoms. This is called an episode with mixed features. People experiencing an episode with mixed features may feel very sad, empty, or hopeless, while at the same time feeling extremely energized.</p>
+        
+        <p>Bipolar disorder can be present even when mood swings are less extreme. For example, some people with bipolar disorder experience hypomania, a less severe form of mania. During a hypomanic episode, an individual may feel very good, be highly productive, and function well. The person may not feel that anything is wrong, but family and friends may recognize the mood swings and/or changes in activity levels as possible bipolar disorder. Without proper treatment, people with hypomania may develop severe mania or depression.</p>
+        
+        <p>Proper diagnosis and treatment help people with bipolar disorder lead healthy and productive lives. Talking with a doctor or other licensed mental health professional is the first step for anyone who thinks he or she may have bipolar disorder. The doctor can complete a physical exam to rule out other conditions. If the problems are not caused by other illnesses, the doctor may conduct a mental health evaluation or provide a referral to a trained mental health professional, such as a psychiatrist, who is experienced in diagnosing and treating bipolar disorder.</p>
+        
+        <p>Some bipolar disorder symptoms are similar to other illnesses, which can make it hard for a doctor to make a diagnosis. In addition, many people have bipolar disorder along with another illness such as anxiety disorder, substance abuse, or an eating disorder. People with bipolar disorder are also at higher risk for thyroid disease, migraine headaches, heart disease, diabetes, obesity, and other physical illnesses.</p>
+        
+        <p><b>Psychosis:</b> Sometimes, a person with severe episodes of mania or depression also has psychotic symptoms, such as hallucinations or delusions. The psychotic symptoms tend to match the person's extreme mood. For example: Someone having psychotic symptoms during a manic episode may believe she is famous, has a lot of money, or has special powers. Someone having psychotic symptoms during a depressive episode may believe he is ruined and penniless, or that he has committed a crime.</p>
+
+        <p>As a result, people with bipolar disorder who also have psychotic symptoms are sometimes misdiagnosed with schizophrenia.</p>
+        
+        <p><b>Anxiety and ADHD:</b> Anxiety disorders and attention-deficit hyperactivity disorder (ADHD) are often diagnosed among people with bipolar disorder.</p>
+        <p><b>Substance Abuse:</b> People with bipolar disorder may also misuse alcohol or drugs, have relationship problems, or perform poorly in school or at work. Family, friends and people experiencing symptoms may not recognize these problems as signs of a major mental illness such as bipolar disorder.</p>
+        
+        <h4>Treatments &amp; Therapies</h4>
+        
+        <h5>Medications</h5>
+        
+        <p>Different types of medications can help control symptoms of bipolar disorder. An individual may need to try several different medications before finding ones that work best. Medications generally used to treat bipolar disorder include mood stabilizers, atypical antipsychotics, and/or antidepressants.</p>
+        
+        <p>Anyone taking a medication should talk with a doctor or a pharmacist to understand the risks and benefits of the medication. Report any concerns about side effects to a doctor right away. The doctor may need to change the dose or try a different medication. Avoid stopping a medication without talking to a doctor first. Suddenly stopping a medication may lead to "rebound" or worsening of bipolar disorder symptoms. Other uncomfortable or potentially dangerous withdrawal effects are also possible.</p>
+        
+        <h5>Psychotherapy</h5>
+        
+        <p>When done in combination with medication, psychotherapy (also called "talk therapy") can be an effective treatment for bipolar disorder. It can provide support, education, and guidance to people with bipolar disorder and their families. Some psychotherapy treatments used to treat bipolar disorder include: Cognitive behavioral therapy (CBT), Family-focused therapy, Interpersonal and social rhythm therapy, and Psychoeducation.</p>
+        
+        <h5>Other Treatment Options</h5>
+        <p><b>Electroconvulsive Therapy (ECT):</b> ECT can provide relief for people with severe bipolar disorder who have not been able to recover with other treatments. Sometimes ECT is used for bipolar symptoms when other medical conditions, including pregnancy, make taking medications too risky. ECT may cause some short-term side effects, including confusion, disorientation, and memory loss. People with bipolar disorder should discuss possible benefits and risks of ECT with a qualified health professional.</p>
+
+        <p><b>Sleep Medications:</b> People with bipolar disorder who have trouble sleeping usually find that treatment is helpful. However, if sleeplessness does not improve, a doctor may suggest a change in medications. If the problem continues, the doctor may prescribe sedatives or other sleep medications.</p>
+        
+        <p><b>Supplements:</b> Not much research has been conducted on herbal or natural supplements and how they may affect bipolar disorder. It is important for a doctor to know about all prescription drugs, over-the-counter medications, and supplements a client is taking. Certain medications and supplements taken together may cause unwanted or dangerous effects.
+</p>
+        <p><a href="#top">Back to top</a></p>
     </div>
         
           <!-- tab4 content -->
 	<div role="tabpanel" class="tab-pane" id="tab4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat a arcu vitae molestie. Quisque pretium erat non placerat tristique. Quisque vitae arcu convallis libero porttitor ornare. Sed posuere est nec bibendum varius. Nulla vulputate eros ac porttitor elementum. Aliquam erat volutpat. Morbi auctor erat vel bibendum venenatis. Maecenas lorem ex, vehicula vel felis non, ultrices hendrerit erat. Proin dictum mollis turpis. Ut mattis dolor non lectus aliquet, vitae dictum lacus vestibulum. Sed sagittis dui libero, quis suscipit tellus malesuada id. Suspendisse nec lacinia orci, nec finibus libero. Sed arcu ipsum, maximus nec lacus tincidunt, varius molestie orci.
+        <div class="center-me"><img src="img/depression.jpg"></div>
+        <h4>Depression</h4>
+        <p>Depression (major depressive disorder or clinical depression) is a common but serious mood disorder. It causes severe symptoms that affect how you feel, think, and handle daily activities, such as sleeping, eating, or working. To be diagnosed with depression, the symptoms must be present for at least two weeks. Some forms of depression are slightly different, or they may develop under unique circumstances, such as:</p>
+        <p><b>Persistent depressive disorder</b> (also called dysthymia) is a depressed mood that lasts for at least two years. A person diagnosed with persistent depressive disorder may have episodes of major depression along with periods of less severe symptoms, but symptoms must last for two years to be considered persistent depressive disorder.</p>
         
-        <p>Nam sit amet ultrices mauris. Donec eu ipsum eleifend nibh consequat scelerisque et sed risus. Etiam nec ex eleifend, pellentesque lectus ut, posuere nibh. Cras tempor ipsum non ullamcorper hendrerit. Suspendisse sit amet eros porta, tempus nunc dignissim, iaculis ante. Ut ornare enim non sem iaculis, quis vulputate orci porta. Curabitur lorem lorem, dignissim ut ex elementum, facilisis congue orci. Sed eu urna ex. Maecenas non nibh sit amet dolor condimentum placerat nec vulputate odio. Cras fermentum sem maximus, aliquet leo non, lobortis ipsum. Quisque condimentum sit amet lorem in cursus.
+        <p><b>Perinatal depression</b> is much more serious than the "baby blues" (relatively mild depressive and anxiety symptoms that typically clear within two weeks after delivery) that many women experience after giving birth. Women with perinatal depression experience full-blown major depression during pregnancy or after delivery (postpartum depression). The feelings of extreme sadness, anxiety, and exhaustion that accompany perinatal depression may make it difficult for these new mothers to complete daily care activities for themselves and/or for their babies.</p>
         
-        <p>In auctor scelerisque magna sed ornare. Proin risus mi, sagittis nec iaculis et, condimentum et lorem. Nulla blandit volutpat lorem ut fermentum. Curabitur et rutrum est. Mauris nisi arcu, facilisis vitae ipsum placerat, convallis ornare massa. Sed in ligula non metus viverra ullamcorper. Donec tincidunt nunc et purus eleifend, auctor sodales erat pulvinar. Duis gravida, nulla eget gravida suscipit, enim odio vulputate lectus, ut volutpat metus neque ut nunc. Donec vel ex nisl. Sed lacus turpis, tincidunt at quam id, sagittis mattis sapien. Morbi ac consectetur nisl, vitae fringilla dolor.
+        <p><b>Psychotic depression</b> occurs when a person has severe depression plus some form of psychosis, such as having disturbing false fixed beliefs (delusions) or hearing or seeing upsetting things that others cannot hear or see (hallucinations). The psychotic symptoms typically have a depressive "theme," such as delusions of guilt, poverty, or illness.</p>
         
-        <p>Sed eleifend urna vitae erat sagittis fringilla. Vivamus id justo id libero pulvinar consequat in porttitor enim. In vel quam fermentum, varius nulla a, feugiat felis. Sed molestie mollis mauris eget pulvinar. Aenean tincidunt efficitur eros vel rhoncus. Praesent ac pretium quam. Quisque scelerisque egestas elit, non molestie ipsum faucibus in. Maecenas vitae euismod erat. Duis consectetur tempor efficitur. Aliquam et nulla efficitur, placerat neque et, lobortis lorem. Nulla facilisi. Maecenas id mattis ante, quis vehicula tortor. Phasellus ornare facilisis lectus id tempor. Suspendisse potenti. Pellentesque sit amet dui sollicitudin, porttitor massa a, rutrum mauris. Curabitur condimentum elit ac eros aliquet, at tristique tortor imperdiet.
+        <p><b>Seasonal affective disorder</b> is characterized by the onset of depression during the winter months, when there is less natural sunlight. This depression generally lifts during spring and summer. Winter depression, typically accompanied by social withdrawal, increased sleep, and weight gain, predictably returns every year in seasonal affective disorder.</p>
         
-        <p>Aliquam erat volutpat. Pellentesque orci purus, interdum id aliquet eget, fringilla ac massa. Aliquam tellus nisl, sagittis eu ultricies in, varius hendrerit leo. Phasellus pulvinar neque sit amet tempus rhoncus. Proin viverra placerat fringilla. Fusce blandit consequat tortor, non euismod enim finibus vel. Maecenas eleifend pellentesque urna, quis dapibus ipsum mollis quis. In porta volutpat risus sit amet facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum, enim sed elementum volutpat, est urna maximus nisi, ac pharetra neque tellus quis risus. Curabitur mollis malesuada euismod. Fusce pulvinar tincidunt urna et dictum. Duis venenatis turpis nisl, sed ultrices tellus malesuada ut. Fusce id justo dolor. Nullam sagittis arcu pellentesque lacus fringilla, nec imperdiet lacus scelerisque.  
+        <p>Not everyone who is depressed experiences every symptom. Some people experience only a few symptoms while others may experience many. Several persistent symptoms in addition to low mood are required for a diagnosis of major depression, but people with only a few – but distressing – symptoms may benefit from treatment of their "subsyndromal" depression. The severity and frequency of symptoms and how long they last will vary depending on the individual and his or her particular illness. Symptoms may also vary depending on the stage of the illness.</p>
+        
+        <p>Depression is one of the most common mental disorders in the U.S. Current research suggests that depression is caused by a combination of genetic, biological, environmental, and psychological factors.</p>
+
+        <p>Depression can happen at any age, but often begins in adulthood. Depression is now recognized as occurring in children and adolescents, although it sometimes presents with more prominent irritability than low mood. Many chronic mood and anxiety disorders in adults begin as high levels of anxiety in children.</p>
+
+        <p>Depression, especially in midlife or older adults, can co-occur with other serious medical illnesses, such as diabetes, cancer, heart disease, and Parkinson's disease. These conditions are often worse when depression is present. Sometimes medications taken for these physical illnesses may cause side effects that contribute to depression. A doctor experienced in treating these complicated illnesses can help work out the best treatment strategy.</p>
+        
+        <h4>Treatments &amp; Therapies</h4>
+        <p>Depression, even the most severe cases, can be treated. The earlier that treatment can begin, the more effective it is. Depression is usually treated with medications, psychotherapy, or a combination of the two. If these treatments do not reduce symptoms, electroconvulsive therapy (ECT) and other brain stimulation therapies may be options to explore. No two people are affected the same way by depression and there is no "one-size-fits-all" for treatment. It may take some trial and error to find the treatment that works best for you.</p>
+        
+        <h5>Medications</h5>
+        <p>Antidepressants are medicines that treat depression. They may help improve the way your brain uses certain chemicals that control mood or stress. You may need to try several different antidepressant medicines before finding the one that improves your symptoms and has manageable side effects. A medication that has helped you or a close family member in the past will often be considered.</p>
+        
+        <p>Antidepressants take time – usually 2 to 4 weeks – to work, and often, symptoms such as sleep, appetite, and concentration problems improve before mood lifts, so it is important to give medication a chance before reaching a conclusion about its effectiveness. If you begin taking antidepressants, do not stop taking them without the help of a doctor. Sometimes people taking antidepressants feel better and then stop taking the medication on their own, and the depression returns. When you and your doctor have decided it is time to stop the medication, usually after a course of 6 to 12 months, the doctor will help you slowly and safely decrease your dose. Stopping them abruptly can cause withdrawal symptoms.</p>
+        
+        <p>You may have heard about an herbal medicine called St. John's wort. Although it is a top-selling botanical product, the FDA has not approved its use as an over-the-counter or prescription medicine for depression, and there are serious concerns about its safety (it should never be combined with a prescription antidepressant) and effectiveness. Do not use St. John's wort before talking to your health care provider. Other natural products sold as dietary supplements, including omega-3 fatty acids and S-adenosylmethionine (SAMe), remain under study but have not yet been proven safe and effective for routine use. </p>
+        
+        <h5>Psychotherapies</h5>
+        <p>Several types of psychotherapy (also called "talk therapy" or, in a less specific form, counseling) can help people with depression. Examples of evidence-based approaches specific to the treatment of depression include cognitive-behavioral therapy (CBT), interpersonal therapy (IPT), and problem-solving therapy. </p>
+        
+        <h5>Brain Stimulation Therapies</h5>
+        
+        <p>If medications do not reduce the symptoms of depression, electroconvulsive therapy (ECT) may be an option to explore. Other more recently introduced types of brain stimulation therapies used to treat medicine-resistant depression include repetitive transcranial magnetic stimulation (rTMS) and vagus nerve stimulation (VNS). Other types of brain stimulation treatments are under study. </p>
+        
+        <p>If you think you may have depression, start by making an appointment to see your doctor or health care provider. This could be your primary care practitioner or a health provider who specializes in diagnosing and treating mental health conditions. </p>  
+        <p><a href="#top">Back to top</a></p>
     </div>
 
 	</div> <!-- end of tab content -->
@@ -142,9 +280,9 @@
             </ul>
             <h4>Follow Us</h4>
             <ul class="nav-social">
-                <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
-                <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
-                <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
+                <li><a href="http://www.facebook.com/nimhgov" target="_blank"><img src="img/follow-us-facebook_152472_2.png"></a></li>
+                <li><a href="https://plus.google.com/+NIMHgov/posts" target="_blank"><img src="img/follow-us-googleplus_152474_2.png"></a></li>
+                <li><a href="http://www.twitter.com/nimhgov" target="_blank"><img src="img/follow-us-twitter_152477_2.png"></a></li>
             </ul>
         </div><!-- end contact -->
         <div class="foot-nav col-xs-2">

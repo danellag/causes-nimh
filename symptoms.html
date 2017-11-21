@@ -36,9 +36,9 @@
                 <!-- search bar -->
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search"  id="search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default"  id="search-btn">Submit</button>
                 </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/causes-nimh/index.html">Topics</a></li>
@@ -48,7 +48,17 @@
                 </div>
             </div>         
         </nav>   <!-- end of bootstrap's nav --> 	
-    
+    <script>
+        subBtn = document.getElementById("search-btn");
+        subBtn.onclick = function(e){
+            e.preventDefault();
+            if(document.getElementById("search").value == ""){
+                alert("Enter a search term.")
+            } else{
+            alert("You have searched for: " + document.getElementById("search").value);
+        };
+        }
+    </script>
     <!-- body content --> 
     
     <div id="symptoms" class="container-fluid symptoms">
@@ -62,35 +72,36 @@
         <div class="col-md-6 main-symptoms">
             <ul id="symptoms-list-top">
                 <h4>Mental Symptoms</h4>
-                <li>Symptom 1</li>
-                <li>Symptom 2</li>
-                <li>Symptom 3</li>
-                <li>Symptom 4</li>
-                <li>Symptom 5</li>
-                <li>Symptom 6</li>
-                <li>Symptom 7</li>
-                <li>Symptom 8</li>
-                <li>Symptom 9</li>
-                <li>Symptom 10</li>
+                <li>Memory Loss</li>
+                <li>Mental Fog</li>
+                <li>Easily Distracted</li>
+                <li>Repetition</li>
+                <li>Difficulty Focusing</li>
+                <li>Forgetfulness</li>
+                <li>Learning Disability</li>
+                <li>Fast Thoughts</li>
+                <li>Sluggish Thoughts</li>
+                <li>Hypervigilance</li>
                 <h4>Emotional Symptoms</h4>
-                <li>Symptom 11</li>
-                <li>Symptom 12</li>
-                <li>Symptom 13</li>
-                <li>Symptom 14</li>
-                <li>Symptom 15</li>
-                <li>Symptom 16</li>
-                <li>Symptom 17</li>
-                <li>Symptom 18</li>
-                <li>Symptom 19</li>
-                <li>Symptom 20</li>
+                <li>Sadness</li>
+                <li>Hopelessness</li>
+                <li>Fear</li>
+                <li>Feeling of Impending Doom</li>
+                <li>Apathy</li>
+                <li>Guilt</li>
+                <li>Paranoia</li>
+                <li>Excessive Excitement</li>
+                <li>Uncontrollable Anger</li>
+                <li>Irritability</li>
                 <h4>Physical Symptoms</h4>
-                <li>Symptom 21</li>
-                <li>Symptom 22</li>
-                <li>Symptom 23</li>
-                <li>Symptom 24</li>
-                <li>Symptom 25</li>
-                <li>Symptom 26</li>
-                <li>Symptom 27</li>
+                <li>Sleep Loss</li>
+                <li>Excessive Sleep</li>
+                <li>Weight Changes</li>
+                <li>Restlessness</li>
+                <li>Fatigue</li>
+                <li>Impulsiveness</li>
+                <li>Violent Outbursts</li>
+                <li>Self-harm</li>
             </ul> 
         </div>
     
@@ -108,20 +119,16 @@
             x = document.querySelectorAll("#symptoms-list-top li")
             for (i=0; i<x.length; ++i) {
                 x[i].onclick = function(){
-                console.log(this);
-                console.log(this.classList);
                 this.classList.toggle("active");
                 sym = this.innerHTML;
                 if (addArray.indexOf(sym) == -1) {
                     addArray.push(sym);
                     addArray.sort();
-                    console.log(addArray);
                 }else {
                     for (i=0; i<addArray.length; i++){
                         r = addArray[i];
                         if (sym==r){
                             addArray.splice(i,1);
-                            console.log(addArray);
                         }
                     }
             };
@@ -151,9 +158,9 @@
             </ul>
             <h4>Follow Us</h4>
             <ul class="nav-social">
-                <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
-                <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
-                <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
+                <li><a href="http://www.facebook.com/nimhgov" target="_blank"><img src="img/follow-us-facebook_152472_2.png"></a></li>
+                <li><a href="https://plus.google.com/+NIMHgov/posts" target="_blank"><img src="img/follow-us-googleplus_152474_2.png"></a></li>
+                <li><a href="http://www.twitter.com/nimhgov" target="_blank"><img src="img/follow-us-twitter_152477_2.png"></a></li>
             </ul>
         </div><!-- end contact -->
         <div class="foot-nav col-xs-2">

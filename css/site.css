@@ -10,11 +10,13 @@ img {max-width: 100%;}
 ul {padding: 0;}
 ul li {list-style: none;}
 h4 {font-weight: bold;}
+h5 {font-size:16px;}
 
 /* ----------------- top nav */
 
 .navbar-brand {height:54px; padding: 0; margin-top: -1px;}
 .nav {margin-right: 15px;}
+.mynav {background: #fff;}
 .navbar-toggle .icon-bar {height: 3px; background: #005395;}
 .mynav .nav > li > a {color: #333; padding:8px;}
 .mynav .nav li {margin-top: 8px;}
@@ -32,18 +34,21 @@ h4 {font-weight: bold;}
 #tabcontent .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li:hover > a:hover  {background-color: #005395; color: #fff; font-weight:bold;border: 1px solid #ddd;border-right: none;}
 .nav-tabs > li.active > a:hover {border: 1px solid #ddd;border-right: none;}
 
-#tabcontent .tab-content {padding-top: 30px;}
+#tabcontent .tab-content {padding-top: 30px; padding-bottom: 30px;}
+#tabcontent .tab-content img {max-width: 100%;}
+#tabcontent .tab-content h4 {margin-top:20px;}
+.center-me {text-align: center;}
 
 
 /* ----------------- symptoms page, contact form */
-.backblue {position:absolute; background-color: #005395;min-height: 100%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px;}
+.backblue {position:fixed; background-color: #005395;min-height: 100%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px; margin-top: -60px;}
 #symptoms, #contact {border-top:1px solid #005395; }
 #symptoms .instructions {margin-left:19%; padding-top: 30px;}
 #symptoms .instructions p {font-weight: bold;}
 #symptoms .main-symptoms, #contact .contact-form {padding-right: 0; margin-left: 17%;}
 
 .main-symptoms #symptoms-list-top {text-align:center; }
-.main-symptoms #symptoms-list-top li {display: inline-block; background-color: #ddd; color: #000; border: 1px solid #999; padding: 10px 0; margin: 15px 10px;border-radius: 4px; width: 120px; }
+.main-symptoms #symptoms-list-top li {display: inline-block; background-color: #ddd; color: #000; border: 1px solid #999; padding: 10px 0; margin: 15px 10px;border-radius: 4px; width: 140px; }
 .main-symptoms #symptoms-list-top li:hover {cursor: pointer;-webkit-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
 -moz-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
 box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);}
@@ -61,9 +66,11 @@ box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);}
 .contact-form form {width: 80%; margin: 0 auto 20px;}
 .contact-form form textarea, .contact-form form input {width: 100%;border-radius:4px; margin-bottom: 20px; margin-top: 5px; padding: 5px;}
 .contact-form form select {width: 25%; border-radius: 4px; margin-bottom: 20px;}
-.contact-form .btn {border: 1px solid #999;}
+.contact-form .btn {border: 1px solid #999; margin-bottom: 50px;}
 p.footnote {font-size: 12px; font-style: italic;}
-
+.contact-form .btn:hover {cursor: pointer;-webkit-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
+-moz-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
+box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);}
 
 .connect ul li a {display: block; background-color: #64666a; text-align: center; padding: 15px 10px; margin: 30px auto; border-radius: 4px;}
 .connect ul li a:hover {background-color: #ddd;}

@@ -36,9 +36,9 @@
                 <!-- search bar -->
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search" id="search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default" id="search-btn">Submit</button>
                 </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/causes-nimh/index.html">Topics</a></li>
@@ -48,7 +48,17 @@
                 </div>
             </div>         
         </nav>   <!-- end of bootstrap's nav --> 	
-    
+    <script>
+        subBtn = document.getElementById("search-btn");
+        subBtn.onclick = function(e){
+            e.preventDefault();
+            if(document.getElementById("search").value == ""){
+                alert("Enter a search term.")
+            } else{
+            alert("You have searched for: " + document.getElementById("search").value);
+        };
+        }
+    </script>
     <!-- body content --> 
     
     <div id="contact" class="container-fluid symptoms">
@@ -66,6 +76,7 @@
                 <input type="number" name="phonenum" id="phonenum"><br>
                 Topic:<br>
                 <select id="select-topic">
+                    <option value=""></option>
                     <option value="ADHD">ADHD</option>
                     <option value="Anxiety">Anxiety</option>
                     <option value="Bipolar Disorder">Bipolar Disorder</option>
@@ -105,11 +116,11 @@
             <div class="col-md-3 connect">
                 <h4>Connect</h4>
                 <ul class="">
-                    <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
-                    <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
-                    <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
-                    <li><a href=""><img src="img/follow-us-youtube_152479_2.png"></a></li>
-                    <li><a href=""><img src="img/follow-us-rss_152476_2.png"></a></li>
+                    <li><a href="http://www.facebook.com/nimhgov" target="_blank"><img src="img/follow-us-facebook_152472_2.png"></a></li>
+                    <li><a href="https://plus.google.com/+NIMHgov/posts" target="_blank"><img src="img/follow-us-googleplus_152474_2.png"></a></li>
+                    <li><a href="http://www.twitter.com/nimhgov" target="_blank"><img src="img/follow-us-twitter_152477_2.png"></a></li>
+                    <li><a href="http://www.youtube.com/nimhgov" target="_blank"><img src="img/follow-us-youtube_152479_2.png"></a></li>
+                    <li><a href="https://www.nimh.nih.gov/news/web-channels/index.shtml" target="_blank"><img src="img/follow-us-rss_152476_2.png"></a></li>
                 </ul>
             </div>
          </div>
@@ -144,16 +155,16 @@
     	<div class="foot-contact col-xs-6">
         	<h4>Contact Us</h4>
          	<ul>
-            	<li class="email"><a href="">nimhinfo@nih.gov</a></li>
+            	<li class="email"><a href="mailto:nimhinfo@nih.gov">nimhinfo@nih.gov</a></li>
                 <li class="phone">1-866-615-6464 (toll free)</li>
-                <li class="fax">1-301-443-4279</li>
+                <li class="fax">1-301-443-4279 (fax)</li>
                 
             </ul>
             <h4>Follow Us</h4>
             <ul class="nav-social">
-                <li><a href=""><img src="img/follow-us-facebook_152472_2.png"></a></li>
-                <li><a href=""><img src="img/follow-us-googleplus_152474_2.png"></a></li>
-                <li><a href=""><img src="img/follow-us-twitter_152477_2.png"></a></li>
+                <li><a href="http://www.facebook.com/nimhgov" target="_blank"><img src="img/follow-us-facebook_152472_2.png"></a></li>
+                <li><a href="https://plus.google.com/+NIMHgov/posts" target="_blank"><img src="img/follow-us-googleplus_152474_2.png"></a></li>
+                <li><a href="http://www.twitter.com/nimhgov" target="_blank"><img src="img/follow-us-twitter_152477_2.png"></a></li>
             </ul>
         </div><!-- end contact -->
         <div class="foot-nav col-xs-2">
