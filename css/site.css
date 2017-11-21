@@ -36,7 +36,7 @@ h4 {font-weight: bold;}
 
 
 /* ----------------- symptoms page, contact form */
-.backblue {position:absolute; background-color: #005395;height: 80%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px;}
+.backblue {position:absolute; background-color: #005395;height: 90%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px;}
 #symptoms, #contact {border-top:1px solid #005395; }
 #symptoms .instructions {margin-left:19%; padding-top: 30px;}
 #symptoms .instructions p {font-weight: bold;}
