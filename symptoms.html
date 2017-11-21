@@ -58,130 +58,76 @@
     
     <!-- body content --> 
     
-    <div id="tabcontent" class="container-fluid symptoms">
+    <div id="symptomscontent" class="container-fluid symptoms">
     <div class="row">
-    
-  <!-- topic tabs -->
-  <ul class="nav nav-tabs col-sm-2" role="tablist">
-    <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Tab1</a></li>
-    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Tab2</a></li>
-    <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Tab3</a></li>
-  </ul>
-
-  <!-- topic tab content -->
-  	<div class="tab-content col-sm-8">
-    <div class="instructions">
-    	Select stuff below: 
-    </div>
-  <!-- tab1 content -->
-    <div role="tabpanel" class="tab-pane active" id="tab1">
-    	<div class="row">
-            <div class="col-md-8 symptoms-to-select">
+        <p class="instructions">Select your symptoms below:</p>
+        <div class="col-md-8">
+            <ul id="symptoms-list-top">
                 <h4>Mental Symptoms</h4>
-            
-                <div class="btn-group">
-                 <label class="btn btn-primary symptom" >
-			        <input type="checkbox" autocomplete="off" name="symlist" value="Checkbox 1"> Checkbox 1
-				 </label>
-                 <label class="btn btn-primary symptom">
-			        <input type="checkbox" autocomplete="off" name="symlist" value="Checkbox 2"> Checkbox 2
-				 </label>
-                  
-                </div>
-            </div>
-            
+                <li>Symptom 1</li>
+                <li>Symptom 2</li>
+                <li>Symptom 3</li>
+                <li>Symptom 4</li>
+                <li>Symptom 5</li>
+                <li>Symptom 6</li>
+                <h4>Emotional Symptoms</h4>
+                <li>Symptom 7</li>
+                <li>Symptom 8</li>
+                <li>Symptom 9</li>
+                <li>Symptom 10</li>
+                <li>Symptom 11</li>
+                <li>Symptom 12</li>
+                <li>Symptom 13</li>
+                <h4>Physical Symptoms</h4>
+                <li>Symptom 14</li>
+                <li>Symptom 15</li>
+                <li>Symptom 16</li>
+            </ul> 
+        </div>
+    
             <div class="selected-symptoms col-md-4">
             	<h4>Selected Symptoms</h4>
-                <ul class="symptoms-list">
-                	<li>Symptom 1</li>
+                <ul id="symptoms-list-bottom">
                 </ul>
             </div>
-   		</div>            
-   </div>
-   
-   <script>
-   	//to append the selected symptom to the Selected Symptoms
-	//first check if the clicked button is checked. 
-	//if yes, we want to collect the label of the button the user clicked. this will be stored in a variable, 'sym'.
-	//second, we want to create an li under the ul '.symptoms-list', and insert the text of 'sym' into it. 
-	//clear variable 'sym' 	
-	
-	/*
-		this.addEventListener("click", function addSym(){
-			if (this.checked = true){
-				sym = document.querySelectorAll("input[name=symlist]:checked");
-				console.log(sym);
-				console.log(sym.length);
-				for (i=0; i<sym.length; i++){
-					v = sym[i-1].value;
-	//				sym = document.querySelector("input[name=symlist]").value;
-					li = document.createElement("li");
-					li.innerHTML = v;
-					//console.log(li);
-					ul = document.querySelector("ul.symptoms-list");
-					//console.log(ul);
-					ul.appendChild(li);
-				};
-		};
-		}
-		);
-*/
-
-
-this.addEventListener("click", function addSym() { //how do I attach this to the button? it tells me addEventListener isn't a function
-	if (this.checked = true){
-		//put it in a list
-		//how to check if it is in the list already or not?
-		sym = document.querySelectorAll("input[name=symlist]:checked");
-		console.log(sym);
-		console.log(sym.length);
-		sym.sort; //sort the list by name
-		for (i=0; i<sym.length; i++){ //for every item in the list
-			v = sym[i].value; //put the text into a variable
-			li = document.createElement("li"); 
-			li.innerHTML = v;//put that variable into the html of the li
-			ul = document.querySelector("ul.symptoms-list"); 
-			ul.appendChild(li); //put the li into the ul
-		};
-		
-	};
-});
-
-//this.addEventListener("click", addSym());
-//		if(this.checked = true) {
-//			addSym();
-//		} else {
-//			console.log("well shit");
-//		};
-//	}); 
-		
-		
-
-	
-	
-	//to remove the selected symptom when the origina button is ****DESELECTED****
-	//store label of button in a hidden array 'removeSym'
-	//store each li in .symptoms-list in hidden array 'storedSym' 
-	//if removeSym.indexOf(storedSym) == -1? (compare the two lists)
-	//if there is a match, remove the match from the list... somehow... ugh
-	
-   </script>
-        
-          <!-- tab2 content -->
-
-	<div role="tabpanel" class="tab-pane" id="tab2">
-        
-	</div>    
-
-          <!-- tab3 content -->
-    <div role="tabpanel" class="tab-pane" id="tab3">
-       
+        </div>
     </div>
+   
+        <script>
+                    addArray = []
+                    x = document.querySelectorAll("#symptoms-list-top li")
+                    for (i=0; i<x.length; ++i) {
+                        x[i].onclick = function(){
+                        console.log(this);
+                        console.log(this.classList);
+                        this.classList.toggle("active");
+                        sym = this.innerHTML;
+                        if (addArray.indexOf(sym) == -1) {
+                            addArray.push(sym);
+                            addArray.sort();
+                            console.log(addArray);
+                        }else {
+                            for (i=0; i<addArray.length; i++){
+                                r = addArray[i];
+                                if (sym==r){
+                                    addArray.splice(i,1);
+                                    console.log(addArray);
+                                }
+                            }
+                    };
+                            document.getElementById("symptoms-list-bottom").innerHTML="";
+                            for (i=0; i<addArray.length; i++){
+                                a = addArray[i];
+                                li = document.createElement("li");
+                                li.innerHTML = a;
+                                ul = document.getElementById("symptoms-list-bottom");
+                                ul.appendChild(li);
+                            };
+                        }
+                    }
+                    
+        </script>
         
-	</div> <!-- end of tab content -->
-    </div> <!-- end of row-->
-</div> <!-- end of topics section and container-fluid -->
-
 <footer>
     <div class="row">
     	<div class="col-md-2"></div>

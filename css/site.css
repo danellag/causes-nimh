@@ -18,7 +18,7 @@ img {max-width: 100%;}
 .navbar-nav > li:nth-child(2) {border-left: 1px solid #337ab7; border-right: 1px solid #337ab7;}
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {background: #337ab7; color: #fff;}
 
-/* ----------------- all tabs */ 
+/* ----------------- main page tabs */ 
 
 #tabcontent {margin: 0 auto; border-top: 1px solid #ddd;}
 #tabcontent .nav-tabs {border-bottom: none; }
@@ -31,18 +31,23 @@ img {max-width: 100%;}
 #tabcontent .tab-content {padding-top: 30px;}
 
 
-/* ----------------- symptoms tabs */
+/* ----------------- symptoms page */
+.symptoms {border-top:1px solid #ddd; padding-top: 30px;}
+.symptoms p.instructions {padding-left:60px; font-weight: bold;}
+.symptoms h4 {font-weight: bold;}
+.symptoms .col-md-8{padding-right: 0;text-align:center;}
 
-.symptoms .symptoms-to-select {padding-right: 0;text-align:center;}
+#symptoms-list-top li {display: inline-block; background-color: #ddd; color: #000; border: 1px solid #999; padding: 10px 0; margin: 15px 10px;border-radius: 4px; width: 120px; }
+#symptoms-list-top li:hover {cursor: pointer;-webkit-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
+-moz-box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);
+box-shadow: 0px 0px 30px 6px rgba(51,121,183,0.35);}
 
-.symptoms .btn-group > .symptom {float: none; display: inline-block; background-color: #ddd; color: #000; margin: 20px;border-radius: 4px; width: 120px; }
-.symptoms .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child), .btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {border-radius:4px;}
+#symptoms-list-top li.active{background-color: #337ab7; color: #fff} 
 
-.symptoms .btn-group > .symptom input:checked {background-color: #337ab7; color: #fff} 
-
-.symptoms .selected-symptoms {padding-right: 0; text-align:center; padding-top: 20px; border-top: 1px solid }
-.symptoms .selected-symptoms {}
-
+.symptoms .selected-symptoms {padding-right: 0; text-align:center;}
+#symptoms-list-bottom, #symptoms-list-top {padding-left:0;}
+.selected-symptoms #symptoms-list-bottom li {list-style: none; padding: 10px 0;border-bottom: 1px dashed #337ab7;}
+.selected-symptoms #symptoms-list-bottom li:first-child {border-top: 1px dashed #337ab7;}
 
 
 
@@ -50,7 +55,7 @@ img {max-width: 100%;}
 /* ----------------- footer */ 
 
 footer {min-height:100px;  margin-top: 80px; background: #64666a; color: #fff;}
-footer .foot-contact, footer .foot-nav, footer .foot-sponsors {border-left: 3px solid #fff; margin: 15px 0;}
+footer .foot-contact, footer .foot-nav, footer .foot-sponsors {border-left: 3px solid #fff; margin: 15px 0; min-height: 196px;}
 footer h4 {font-weight:bold; margin-top: 20px}
 footer ul {padding: 0;}
 footer ul li {list-style:none; margin: 1px 0; padding: 0}
@@ -79,6 +84,7 @@ footer ul.nav-social li:first-child {padding: 0 10px 0 0;}
 	#tabcontent .nav-tabs > li:first-child > a, .nav-tabs > li:first-child.active > a, .nav-tabs > li:first-child.active > a:focus, .nav-tabs > li:first-child.active > a:hover {border-left: none; border-right: none;}
 	#tabcontent .tab-content {padding-top: 20px;}
 	
+    .symptoms .selected-symptoms { padding-top: 20px; border-top: 1px solid }
 	
 	footer .row {margin: 0;}
 	footer .foot-contact, footer .foot-nav,  footer .foot-sponsors {padding: 1px 0 10px 15px; margin-left: 20px}
