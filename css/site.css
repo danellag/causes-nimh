@@ -2,11 +2,11 @@
 /* CSS Document */
 
 /* default bootstrap changes because I hate how little control I have over alignments in desktop vs mobile */
-
+html, body {height: 100%;}
 .col-xs-6 {width: 25%}
 .row {margin-right: 0;}
 img {max-width: 100%;}
-.container-fluid {padding-right: 0;}
+.container-fluid {padding-right: 0; min-height: 100%;}
 ul {padding: 0;}
 ul li {list-style: none;}
 h4 {font-weight: bold;}
@@ -36,7 +36,7 @@ h4 {font-weight: bold;}
 
 
 /* ----------------- symptoms page, contact form */
-.backblue {position:absolute; background-color: #005395;height: 90%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px;}
+.backblue {position:absolute; background-color: #005395;min-height: 100%; z-index:-1; padding-left: 0; padding-right: 0; margin-left: -10px;}
 #symptoms, #contact {border-top:1px solid #005395; }
 #symptoms .instructions {margin-left:19%; padding-top: 30px;}
 #symptoms .instructions p {font-weight: bold;}
@@ -78,7 +78,7 @@ p.footnote {font-size: 12px; font-style: italic;}
 
 /* ----------------- footer */ 
 
-footer {min-height:100px;  margin-top: 80px; background: #64666a; color: #fff;}
+footer {min-height:100px; background: #64666a; color: #fff;}
 footer .foot-contact, footer .foot-nav, footer .foot-sponsors {border-left: 3px solid #fff; margin: 15px 0; min-height: 196px;}
 footer h4 {font-weight:bold; margin-top: 20px}
 footer ul {padding: 0;}
